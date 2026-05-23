@@ -172,20 +172,20 @@ export default function Home() {
 
             <div className="pub-label">Publicidad</div>
 
-            <div className="ad-block">
-              <div className="ad-perkins">
-                <span className="brand">Perkins</span>
-                <div className="cat">Ropa para Hombre y Dama</div>
-                <div className="slogan">&quot;Viste caqui, viste Perkins.&quot;</div>
-                <div className="addr">Búscanos en tu caracol más cercano.</div>
+            <div className="box" style={{ padding: 0, borderTop: '4px solid #006600', textAlign: 'center' }}>
+              <div style={{ padding: '14px 8px 8px', background: '#ffffff' }}>
+                <span style={{ fontFamily: '"Arial Black", Arial, sans-serif', fontSize: 28, color: '#006600', fontWeight: 900, display: 'block', lineHeight: 1 }}>Perkins</span>
+                <div style={{ fontSize: 9, color: '#666', margin: '3px 0' }}>Ropa para Hombre y Dama</div>
+                <div style={{ fontFamily: '"Times New Roman", serif', fontStyle: 'italic', fontSize: 11, color: '#333', borderTop: '1px solid #ccc', paddingTop: 4, marginTop: 4 }}>&quot;Viste caqui, viste Perkins.&quot;</div>
+                <div style={{ fontSize: 9, color: '#888', marginTop: 4 }}>Búscanos en tu caracol más cercano.</div>
               </div>
             </div>
 
-            <div className="ad-block">
-              <div className="ad-arepa">
-                <img src="https://res.cloudinary.com/dlismekzd/image/upload/v1779551190/telemira/arepa-franklin.png" alt="Arepa Franklin" style={{ width: '100%', display: 'block' }} />
-                <span className="slogan">¡LA AREPA QUE TE LLENA DE VERDAD!</span>
-                <div className="addr">Pregunta por nuestro carrito en el barrio Franklin.</div>
+            <div className="box" style={{ padding: 0, borderTop: '4px solid #ffcc00', textAlign: 'center' }}>
+              <img src="https://res.cloudinary.com/dlismekzd/image/upload/v1779551190/telemira/arepa-franklin.png" alt="Arepa Franklin" style={{ width: '100%', display: 'block' }} />
+              <div style={{ background: '#ff6600', padding: '4px 8px 8px' }}>
+                <span style={{ background: '#ffcc00', color: '#cc3300', fontFamily: 'Tahoma, sans-serif', fontWeight: 'bold', fontSize: 10, padding: '2px 4px', display: 'block', margin: '4px 0' }}>¡LA AREPA QUE TE LLENA DE VERDAD!</span>
+                <div style={{ fontSize: 9, color: '#ffddcc' }}>Pregunta por nuestro carrito en el barrio Franklin.</div>
               </div>
             </div>
 
