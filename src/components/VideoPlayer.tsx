@@ -67,15 +67,27 @@ export default function VideoPlayer() {
           <small>COBERTURA ESPECIAL · CASO EN DESARROLLO · TELEMIRA</small>
         </div>
         <PlayerTimestamp />
+        {muted && (
+          <div onClick={activateAudio} style={{
+            position: 'absolute', inset: 0,
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            background: 'rgba(0,0,0,0.45)', cursor: 'pointer', zIndex: 10
+          }}>
+            <div className="blink" style={{
+              background: '#cc0000', color: '#ffff00',
+              fontFamily: 'Tahoma, Arial, sans-serif', fontWeight: 'bold',
+              fontSize: 16, padding: '12px 24px', letterSpacing: 2,
+              border: '2px solid #ffcc00', boxShadow: '0 0 16px rgba(255,0,0,0.6)'
+            }}>
+              🔇 CLIC PARA ACTIVAR AUDIO
+            </div>
+          </div>
+        )}
       </div>
       <div className="player-bar">
         <div className="pb-btn" onClick={toggle} style={{ cursor: 'pointer' }}>{playing ? '‖' : '▶'}</div>
         <div className="pb-btn" onClick={stop} style={{ cursor: 'pointer' }}>■</div>
-        {muted ? (
-          <div className="pb-btn blink" onClick={activateAudio} style={{ cursor: 'pointer', color: '#ffcc00', fontSize: 9, padding: '0 6px' }}>
-            🔇 ACTIVAR AUDIO
-          </div>
-        ) : (
+        {muted ? null : (
           <>
             <input
               type="range" min={0} max={100} value={volume}
