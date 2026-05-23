@@ -117,7 +117,7 @@ export default function Vivo() {
       }}>
         <a href="/" style={{ color: '#ffcc00', fontWeight: 'bold', fontSize: 12, textDecoration: 'none' }}>← Volver al sitio</a>
         <div style={{ color: '#fff', fontWeight: 'bold', fontSize: 13, letterSpacing: 2 }}>TELEMIRA — SEÑAL EN VIVO</div>
-        <div style={{ color: '#ffcc00', fontSize: 11 }}>{playlist.length > 0 ? `${idx + 1} / ${playlist.length}` : ''}</div>
+
       </div>
 
       <div style={{ position: 'relative', width: '100%', maxWidth: 960, flex: 1, display: 'flex', alignItems: 'center' }}>
