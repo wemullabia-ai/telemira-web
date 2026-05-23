@@ -2,41 +2,18 @@
 import { useState, useEffect, useRef } from 'react'
 
 const VIDEOS = [
-  'Broncooo.mp4',
-  'Corazon de alcncía.mp4',
-  'Demasiado vestidos promo.mp4',
-  'Doctores millonarios.mp4',
-  'FUTBOLISTA FRANCO.mp4',
-  'Homotherian.mp4',
-  'K PAP V2.mp4',
-  'Luis Facha.mp4',
-  'PATAENLOCICO.mp4',
-  'Profr Fabian corto.mp4',
-  'Shosdelacul.mp4',
-  'Statusbucks.mp4',
-  'adam cocina.mp4',
-  'alargamiento de espalda.mp4',
-  'arepa franklin 1.mp4',
-  'azotea.mp4',
-  'bozal.mp4',
-  'bullyns animal.mp4',
-  'bussiness kids kit.mp4',
-  'cerebro anime.mp4',
-  'chiguaguas.mp4',
-  'cutecuernas.mp4',
-  'escorpio.mp4',
-  'formertrans.mp4',
-  'gag mambo.mp4',
-  'hijo.mp4',
-  'manicomio de plantas.mp4',
-  'pancho puelma junior.mp4',
-  'para sonreír.mp4',
-  'perkins mujeres.mp4',
-  'perkins.mp4',
-  'poetas extremos.mp4',
-  'rechilcer.mp4',
-  'vr set for babies.mp4',
-  'zalo reyes.mp4',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779521280/telemira/Corazon_de_alcnci_a.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779521434/telemira/Demasiado_vestidos_promo.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779523696/telemira/PATAENLOCICO.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779524176/telemira/adam_cocina.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779524384/telemira/arepa_franklin_1.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779524405/telemira/azotea.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779524704/telemira/cerebro_anime.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779524748/telemira/chiguaguas.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779525300/telemira/hijo.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779525835/telemira/para_sonrei_r.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779525983/telemira/perkins_mujeres.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779526448/telemira/zalo_reyes.mov',
 ]
 
 function shuffle<T>(arr: T[]): T[] {
@@ -109,7 +86,7 @@ export default function Vivo() {
             <video
               ref={videoRef}
               key={current}
-              src={`/uploads/videos/${encodeURIComponent(current)}`}
+              src={current}
               autoPlay
               controls
               playsInline
@@ -138,7 +115,7 @@ export default function Vivo() {
         padding: '6px 16px', boxSizing: 'border-box'
       }}>
         <div style={{ color: '#ccc', fontSize: 10, letterSpacing: 1 }}>
-          {current?.replace('.mp4', '').toUpperCase()}
+          {current?.split('/').pop()?.replace(/\.(mp4|mov)$/, '').replace(/_/g, ' ').toUpperCase()}
         </div>
         <div style={{
           display: 'flex', gap: 20, alignItems: 'center',
