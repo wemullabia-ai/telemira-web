@@ -65,15 +65,15 @@ export default function Vivo() {
   const getVideo = useCallback((which: 'a' | 'b') =>
     which === 'a' ? videoA.current : videoB.current, [])
 
-  // Cuando cambia idx: el video inactivo ya tiene el src precargado, solo mostrarlo
   useEffect(() => {
     if (!playlist.length) return
     const current = getVideo(active)
     const buffer = getVideo(active === 'a' ? 'b' : 'a')
-    if (current) current.play().catch(() => {})
-    // precarga el siguiente
+    // activo: con sonido
+    if (current) { current.muted = false; current.play().catch(() => {}) }
+    // buffer: siempre mudo mientras precarga
     const nextIdx = (idx + 1) % playlist.length
-    if (buffer) { buffer.src = playlist[nextIdx]; buffer.load() }
+    if (buffer) { buffer.muted = true; buffer.src = playlist[nextIdx]; buffer.load() }
   }, [idx, active, playlist, getVideo])
 
   const go = useCallback((dir: 1 | -1) => {
@@ -81,10 +81,8 @@ export default function Vivo() {
       const next = (i + dir + playlist.length) % playlist.length
       const nextActive = active === 'a' ? 'b' : 'a'
       const nextVideo = getVideo(nextActive)
-      if (nextVideo) {
-        nextVideo.src = playlist[next]
-        nextVideo.load()
-      }
+      // asegurar mudo antes de cargar
+      if (nextVideo) { nextVideo.muted = true; nextVideo.src = playlist[next]; nextVideo.load() }
       setActive(nextActive)
       return next
     })
@@ -125,7 +123,7 @@ export default function Vivo() {
       <div style={{ position: 'relative', width: '100%', maxWidth: 960, flex: 1, display: 'flex', alignItems: 'center' }}>
         <div style={{ width: '100%', position: 'relative' }}>
           <video ref={videoA} src={playlist[0] ?? ''} autoPlay controls playsInline onEnded={() => go(1)} style={videoStyle('a')} />
-          <video ref={videoB} controls playsInline onEnded={() => go(1)} style={videoStyle('b')} />
+          <video ref={videoB} muted controls playsInline onEnded={() => go(1)} style={videoStyle('b')} />
           <div style={{ position: 'absolute', top: 10, left: 10, background: '#cc0000', color: '#fff', fontWeight: 'bold', fontSize: 11, padding: '2px 8px', borderRadius: 2 }}>● EN VIVO</div>
           <div style={{ position: 'absolute', top: 10, right: 10, background: '#003399', color: '#ffcc00', fontWeight: 'bold', fontSize: 11, padding: '2px 8px', borderRadius: 2, fontStyle: 'italic' }}>tm</div>
         </div>
