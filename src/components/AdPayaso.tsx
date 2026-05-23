@@ -12,7 +12,7 @@ export default function AdPayaso() {
       >
         <video
           ref={videoRef}
-          src="/uploads/payaso-ad.mp4"
+          src="https://res.cloudinary.com/dlismekzd/video/upload/v1779548410/payaso_ad_qz9k79.mp4"
           autoPlay muted loop playsInline
           style={{ width: '100%', display: 'block', cursor: 'pointer' }}
         />

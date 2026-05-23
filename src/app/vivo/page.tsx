@@ -22,6 +22,11 @@ const VIDEOS = [
   'https://res.cloudinary.com/dlismekzd/video/upload/v1779525835/telemira/para_sonrei_r.mov',
   'https://res.cloudinary.com/dlismekzd/video/upload/v1779525983/telemira/perkins_mujeres.mov',
   'https://res.cloudinary.com/dlismekzd/video/upload/v1779526448/telemira/zalo_reyes.mov',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779548357/vr_set_for_babies_irtvli.mp4',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779548355/Shosdelacul_gdacb1.mp4',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779548356/Statusbucks_euntbj.mp4',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779548328/Profr_Fabian_corto_rmhlst.mp4',
+  'https://res.cloudinary.com/dlismekzd/video/upload/v1779548314/rechilcer_qhiitf.mp4',
 ]
 
 function shuffle<T>(arr: T[]): T[] {

@@ -39,7 +39,7 @@ export default function VideoPlayer() {
       <div className="player">
         <video
           ref={videoRef}
-          src="/uploads/presentación Canal.mp4"
+          src="https://res.cloudinary.com/dlismekzd/video/upload/v1779548389/presentacio%CC%81n_Canal_vo9dsf.mp4"
           autoPlay
           playsInline
           style={{ width: '100%', display: 'block' }}
