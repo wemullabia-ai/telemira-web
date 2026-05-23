@@ -720,3 +720,46 @@ table { border-collapse: collapse; }
   opacity: 0;
   visibility: hidden;
 }
+
+/* ===================== MÓVIL ===================== */
+@media (max-width: 768px) {
+
+  .utility { font-size: 9px; flex-direction: column; gap: 2px; text-align: center; padding: 4px 8px; }
+
+  .masthead { height: 110px; }
+  .tm-logo-wrap { padding: 0 8px; }
+  .tm-logo { width: 54px; }
+  .tm-logo .tm-letters { font-size: 22px; }
+  .tagline-block { display: none; }
+
+  .nav { font-size: 10px; padding: 4px 2px; gap: 1px; overflow-x: auto; flex-wrap: nowrap; white-space: nowrap; justify-content: flex-start; }
+  .nav a { padding: 3px 4px; }
+
+  .marquee-wrap { font-size: 10px; }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .center-col { order: 1; }
+  .left-col  { order: 2; }
+  .right-col { order: 3; }
+
+  .show-cards { flex-direction: column; }
+  .show-card { flex-direction: row; align-items: flex-start; gap: 8px; }
+  .show-card img { width: 80px; height: 60px; flex-shrink: 0; }
+
+  .banners { flex-direction: column; }
+
+  .horo-small { flex-direction: column; }
+  .horo-small img { width: 80px; }
+
+  .footer { flex-direction: column; gap: 8px; text-align: center; }
+  .foot-links { flex-wrap: wrap; justify-content: center; }
+  .badges-88 { justify-content: center; }
+  .sitelock { display: none; }
+
+  .popup { width: 90vw; right: 5vw; left: 5vw; top: 10%; }
+
+  #telemensajero { display: none; }
+}
