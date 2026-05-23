@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# videos (demasiado grandes para GitHub)
+public/uploads/videos/
+public/uploads/*.mp4
