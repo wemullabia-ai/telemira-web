@@ -35,7 +35,7 @@ export default function Popup() {
         </span>
       </div>
       <div className="body" style={{ padding: 0, overflow: 'hidden' }}>
-        <img src="/uploads/bronco.jpg" alt="Bronco" style={{ width: '100%', display: 'block' }} />
+        <img src="https://res.cloudinary.com/dlismekzd/image/upload/v1779551195/telemira/bronco.png" alt="Bronco" style={{ width: '100%', display: 'block' }} />
       </div>
       <div className="actions">
         <button onClick={close}>Más información</button>

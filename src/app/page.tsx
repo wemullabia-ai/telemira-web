@@ -183,7 +183,7 @@ export default function Home() {
 
             <div className="ad-block">
               <div className="ad-arepa">
-                <img src="/uploads/arepa-franklin.jpg" alt="Arepa Franklin" style={{ width: '100%', display: 'block' }} />
+                <img src="https://res.cloudinary.com/dlismekzd/image/upload/v1779551190/telemira/arepa-franklin.png" alt="Arepa Franklin" style={{ width: '100%', display: 'block' }} />
                 <span className="slogan">¡LA AREPA QUE TE LLENA DE VERDAD!</span>
                 <div className="addr">Pregunta por nuestro carrito en el barrio Franklin.</div>
               </div>
