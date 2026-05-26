@@ -1,4 +1,41 @@
+'use client'
+import { useRef, useState, useEffect } from 'react'
+
 export default function Vivo() {
+  const audioRef = useRef<HTMLAudioElement>(null)
+  const [playing, setPlaying] = useState(false)
+  const [muted, setMuted] = useState(false)
+
+  // Autoplay en cuanto el usuario interactúe
+  useEffect(() => {
+    const tryPlay = () => {
+      audioRef.current?.play().then(() => setPlaying(true)).catch(() => {})
+      window.removeEventListener('click', tryPlay)
+      window.removeEventListener('keydown', tryPlay)
+    }
+    // Intenta autoplay directo primero
+    audioRef.current?.play().then(() => setPlaying(true)).catch(() => {
+      window.addEventListener('click', tryPlay)
+      window.addEventListener('keydown', tryPlay)
+    })
+    return () => {
+      window.removeEventListener('click', tryPlay)
+      window.removeEventListener('keydown', tryPlay)
+    }
+  }, [])
+
+  const togglePlay = () => {
+    const a = audioRef.current
+    if (!a) return
+    if (a.paused) { a.play(); setPlaying(true) }
+    else { a.pause(); setPlaying(false) }
+  }
+
+  const toggleMute = () => {
+    if (!audioRef.current) return
+    audioRef.current.muted = !muted
+    setMuted(!muted)
+  }
   return (
     <div style={{
       background: '#000080',
@@ -111,8 +148,67 @@ export default function Vivo() {
         </div>
       </div>
 
+      {/* Player de música retro estilo WinAmp */}
+      <div style={{
+        width: '100%', maxWidth: 700,
+        background: '#1a1a2e',
+        border: '2px solid #ffcc00',
+        borderTop: 'none',
+        padding: '6px 12px',
+        display: 'flex', alignItems: 'center', gap: 10,
+        boxSizing: 'border-box',
+      }}>
+        {/* Botón play/pause */}
+        <button onClick={togglePlay} style={{
+          background: '#003399', color: '#ffcc00',
+          border: '1px solid #ffcc00', padding: '2px 10px',
+          fontFamily: 'Tahoma', fontSize: 13, fontWeight: 'bold',
+          cursor: 'pointer', letterSpacing: 1,
+        }}>
+          {playing ? '⏸' : '▶'}
+        </button>
+
+        {/* Botón mute */}
+        <button onClick={toggleMute} style={{
+          background: '#003399', color: muted ? '#888' : '#ffcc00',
+          border: '1px solid #ffcc00', padding: '2px 8px',
+          fontFamily: 'Tahoma', fontSize: 11,
+          cursor: 'pointer',
+        }}>
+          {muted ? '🔇' : '🔊'}
+        </button>
+
+        {/* Nombre de la canción */}
+        <div style={{ flex: 1, overflow: 'hidden' }}>
+          <div style={{
+            color: '#00ff88',
+            fontFamily: '"Courier New", monospace',
+            fontSize: 11,
+            whiteSpace: 'nowrap',
+            animation: 'marquee-song 14s linear infinite',
+          }}>
+            ♫ &nbsp; Ping-Pong Petals &nbsp; — &nbsp; TELEMIRA CANAL 7 &nbsp; ★ &nbsp; Ping-Pong Petals &nbsp;
+          </div>
+        </div>
+
+        <div style={{ color: '#ffcc00', fontSize: 9, fontFamily: 'Tahoma', letterSpacing: 1, whiteSpace: 'nowrap' }}>
+          FM 99.1
+        </div>
+
+        <audio
+          ref={audioRef}
+          src="/uploads/ping-pong-petals.mp3"
+          loop
+          preload="auto"
+        />
+      </div>
+
       <style>{`
         @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes marquee-song {
+          0%   { transform: translateX(100%); }
+          100% { transform: translateX(-100%); }
+        }
       `}</style>
     </div>
   )
