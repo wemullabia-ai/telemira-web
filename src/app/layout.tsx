@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'TELEMIRA :: Su Ventana al Mundo desde 1994',
     description: 'Canal 7 — Señal en vivo, programación, concursos y más. El canal de todos.',
-    url: 'https://telemira-web.vercel.app',
+    url: 'https://telemira.tv',
     siteName: 'Telemira',
     locale: 'es_LA',
     type: 'website',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  metadataBase: new URL('https://telemira-web.vercel.app'),
+  metadataBase: new URL('https://telemira.tv'),
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
