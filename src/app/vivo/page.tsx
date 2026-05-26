@@ -54,47 +54,47 @@ export default function Vivo() {
           </div>
         </div>
 
+        {/* Texto BAJO CONSTRUCCIÓN — encima de la imagen, sin taparla */}
+        <div style={{
+          background: '#001a6e',
+          padding: '14px 24px',
+          textAlign: 'center',
+          borderBottom: '2px solid #ffcc00',
+        }}>
+          <div style={{
+            display: 'inline-block',
+            background: '#cc0000',
+            color: '#ffff00',
+            fontFamily: 'Tahoma, Arial, sans-serif',
+            fontWeight: 'bold',
+            fontSize: 20,
+            padding: '6px 22px',
+            letterSpacing: 3,
+            border: '3px solid #ffff00',
+            textShadow: '1px 1px 0 #000',
+            boxShadow: '0 0 16px rgba(255,0,0,0.6)',
+          }}>
+            🚧 BAJO CONSTRUCCIÓN 🚧
+          </div>
+          <div style={{
+            color: '#aaa',
+            fontSize: 11,
+            marginTop: 8,
+            fontFamily: 'Tahoma',
+            letterSpacing: 1,
+          }}>
+            Estamos trabajando para traerte la mejor señal. —{' '}
+            <span style={{ color: '#ffcc00' }}>Canal 7 Telemira</span>
+          </div>
+        </div>
+
         {/* Imagen mono */}
-        <div style={{ position: 'relative', width: '100%', background: '#000' }}>
+        <div style={{ width: '100%', background: '#000' }}>
           <img
             src="/uploads/bajo-construccion-mono.jpg"
             alt="Bajo Construcción"
-            style={{ width: '100%', display: 'block', opacity: 0.92 }}
+            style={{ width: '100%', display: 'block' }}
           />
-
-          {/* Overlay texto */}
-          <div style={{
-            position: 'absolute', bottom: 0, left: 0, right: 0,
-            background: 'linear-gradient(transparent, rgba(0,0,26,0.92))',
-            padding: '32px 24px 20px',
-            textAlign: 'center',
-          }}>
-            <div style={{
-              display: 'inline-block',
-              background: '#cc0000',
-              color: '#ffff00',
-              fontFamily: 'Tahoma, Arial, sans-serif',
-              fontWeight: 'bold',
-              fontSize: 22,
-              padding: '8px 24px',
-              letterSpacing: 3,
-              border: '3px solid #ffff00',
-              textShadow: '1px 1px 0 #000',
-              boxShadow: '0 0 20px rgba(255,0,0,0.7)',
-            }}>
-              🚧 BAJO CONSTRUCCIÓN 🚧
-            </div>
-            <div style={{
-              color: '#ccc',
-              fontSize: 12,
-              marginTop: 10,
-              fontFamily: 'Tahoma',
-              letterSpacing: 1,
-            }}>
-              Estamos trabajando para traerte la mejor señal.<br />
-              Vuelve pronto. — <span style={{ color: '#ffcc00' }}>Canal 7 Telemira</span>
-            </div>
-          </div>
         </div>
 
         {/* Barra inferior */}
