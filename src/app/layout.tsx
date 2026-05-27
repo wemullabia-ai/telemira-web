@@ -2,21 +2,23 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'TELEMIRA :: Su Ventana al Mundo desde 1994 - Sitio Oficial',
-  description: 'Canal 7 — Señal en vivo, programación, concursos, noticias y más. El canal de todos. Mejor visualizado en 1024x768.',
+  title: 'Somos Telemira, tu canal pluralista.',
+  description: 'Cuando la realidad supera a la IA',
   keywords: ['Telemira', 'canal 7', 'televisión', 'señal en vivo', 'programación', 'concursos', 'noticias'],
   openGraph: {
-    title: 'TELEMIRA :: Su Ventana al Mundo desde 1994',
-    description: 'Canal 7 — Señal en vivo, programación, concursos y más. El canal de todos.',
+    title: 'Somos Telemira, tu canal pluralista.',
+    description: 'Cuando la realidad supera a la IA',
     url: 'https://telemira.tv',
     siteName: 'Telemira',
+    images: [{ url: '/icon.png', width: 512, height: 512, alt: 'Telemira Logo' }],
     locale: 'es_LA',
     type: 'website',
   },
   twitter: {
     card: 'summary',
-    title: 'TELEMIRA :: Su Ventana al Mundo desde 1994',
-    description: 'Canal 7 — Señal en vivo, programación, concursos y más.',
+    title: 'Somos Telemira, tu canal pluralista.',
+    description: 'Cuando la realidad supera a la IA',
+    images: ['/icon.png'],
   },
   robots: {
     index: true,
