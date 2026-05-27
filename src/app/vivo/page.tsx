@@ -6,11 +6,11 @@ const PLAYLIST = [
   { title: 'Vamos Por La Copa',           file: 'Vamos Por La Copa.mp3' },
   { title: 'Poetas Extremos',             file: 'Poetas Extremos.mp3' },
   { title: 'Usa Mi Ropa No Suelta La Tele', file: 'Usa mi ropa, no suelta la tele,.mp3' },
-  { title: 'Stadium Glasses',             file: 'Stadium Glasses.mp3' },
-  { title: 'Ping-Pong Petals',            file: 'Ping-Pong Petals.mp3' },
-  { title: 'Ping-Pong Petals (Alt)',      file: 'Ping-Pong Petals (1).mp3' },
-  { title: 'Pudding Raincoat',            file: 'Pudding Raincoat.mp3' },
-  { title: 'Morning Signal',              file: 'Morning Signal.mp3' },
+  { title: 'El Hincha Que Olvidó Sus Anteojos', file: 'Stadium Glasses.mp3' },
+  { title: 'Romance en la Mesa de Ping-Pong',   file: 'Ping-Pong Petals.mp3' },
+  { title: 'Romance en la Mesa de Ping-Pong (Versión Triste)', file: 'Ping-Pong Petals (1).mp3' },
+  { title: 'El Flan con Impermeable Azul',      file: 'Pudding Raincoat.mp3' },
+  { title: 'Buenos Días, Aquí Telemira',         file: 'Morning Signal.mp3' },
 ]
 
 function EqBars({ active }: { active: boolean }) {
