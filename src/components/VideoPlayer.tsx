@@ -63,7 +63,7 @@ export default function VideoPlayer() {
         <div className="live-bug">● EN VIVO</div>
         <div className="channel-bug">tm7</div>
         <div className="lower-third">
-          JULIETA MASILLA · ¿DÓNDE ESTÁ?
+          JULIETA MANSILLA · ¿DÓNDE ESTÁ?
           <small>COBERTURA ESPECIAL · CASO EN DESARROLLO · TELEMIRA</small>
         </div>
         <PlayerTimestamp />
