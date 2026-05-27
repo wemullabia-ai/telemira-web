@@ -721,6 +721,61 @@ table { border-collapse: collapse; }
   visibility: hidden;
 }
 
+/* ---- SOCIAL LINKS ---- */
+.social-links { margin: 0; padding: 0; }
+.social-links li {
+  list-style: none;
+  border-bottom: 1px dotted #cccccc;
+  padding: 4px 6px;
+  font-size: 10px;
+}
+.social-links li::before { content: "► "; color: #cc0000; font-size: 9px; }
+
+/* ---- STARS LIST ---- */
+.stars-list { margin: 0; padding: 4px 6px; }
+.stars-list li {
+  list-style: none;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #cccccc;
+  padding-bottom: 4px;
+}
+.stars-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.star-name { display: block; font-weight: bold; color: #000066; font-size: 10px; }
+.star-handle { display: block; color: #333333; font-family: "Courier New", monospace; font-size: 10px; margin-top: 1px; }
+
+/* ---- YOUTUBE BANNER ---- */
+.banner-youtube {
+  grid-column: 1 / -1;
+  background: #cc0000;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px outset #ff6666;
+  margin-bottom: 4px;
+}
+.banner-youtube:active { border-style: inset; }
+.banner-youtube:hover { background: #aa0000; text-decoration: none; }
+.yt-icon {
+  background: #ffffff;
+  color: #cc0000;
+  width: 24px; height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.yt-text {
+  display: flex;
+  flex-direction: column;
+}
+.yt-title { font-family: "Arial Black", Arial, sans-serif; font-size: 13px; line-height: 1.1; }
+.yt-cta { font-family: Tahoma, sans-serif; font-size: 9px; color: #ffcc00; font-weight: bold; }
+
 /* ===================== MÓVIL ===================== */
 @media (max-width: 768px) {
 

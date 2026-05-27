@@ -97,6 +97,16 @@ export default function Home() {
               </div>
             </div>
 
+            <div className="box">
+              <h3>Síguenos en Internet</h3>
+              <ul className="social-links">
+                <li><a href="https://www.instagram.com/telemira.tv/" target="_blank" rel="noopener noreferrer">Instagram Oficial</a> <span className="badge-new">NUEVO!</span></li>
+                <li><a href="https://x.com/telemiratv?s=21&t=UPc2YaiRU6dFk-wSVTnHJA" target="_blank" rel="noopener noreferrer">X / Twitter</a></li>
+                <li><a href="https://www.tiktok.com/@telemira.tv?_r=1&_t=ZS-96iMpNINuC0" target="_blank" rel="noopener noreferrer">TikTok (Videos Cortos)</a></li>
+                <li><a href="https://www.facebook.com/share/1D7mcRfGFF/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook (Página de Fans)</a></li>
+              </ul>
+            </div>
+
             <AdPayaso />
 
           </div>
@@ -152,6 +162,13 @@ export default function Home() {
             </div>
 
             <div className="banners">
+              <a href="https://www.youtube.com/channel/UCYndcBw_lDj4WqHUtvdrr4w" target="_blank" rel="noopener noreferrer" className="banner-youtube">
+                <span className="yt-icon">▶</span>
+                <div className="yt-text">
+                  <span className="yt-title">CANAL OFICIAL DE YOUTUBE</span>
+                  <span className="yt-cta">MIRA NUESTROS EPISODIOS COMPLETOS AQUÍ</span>
+                </div>
+              </a>
               <div className="banner-lv">
                 <span className="env-icon">✉</span>
                 <span>ESCRÍBENOS TU OPINIÓN<br />EN NUESTRO LIBRO DE VISITAS</span>
@@ -169,6 +186,24 @@ export default function Home() {
 
           {/* ===== RIGHT SIDEBAR ===== */}
           <div className="right-col">
+
+            <div className="box">
+              <h3>Nuestras Estrellas</h3>
+              <ul className="stars-list">
+                <li>
+                  <span className="star-name">Luis Mario</span>
+                  <span className="star-handle">@luismariotelemira</span>
+                </li>
+                <li>
+                  <span className="star-name">Julieta Mancilla</span>
+                  <span className="star-handle">@julietamancillaperiodista</span>
+                </li>
+                <li>
+                  <span className="star-name">Billy Pendiado</span>
+                  <span className="star-handle">@billypendiado</span>
+                </li>
+              </ul>
+            </div>
 
             <div className="pub-label">Publicidad</div>
 
