@@ -7,6 +7,7 @@ import Chat from '@/components/Chat'
 import VisitorCounter from '@/components/VisitorCounter'
 import ClientAnimations from '@/components/ClientAnimations'
 import CursorTrail from '@/components/CursorTrail'
+import HackedBanner from '@/components/HackedBanner'
 
 export default function Home() {
   return (
@@ -114,14 +115,7 @@ export default function Home() {
           {/* ===== CENTER COLUMN ===== */}
           <div className="center-col">
 
-            <a href="https://www.youtube.com/channel/UCYndcBw_lDj4WqHUtvdrr4w" target="_blank" rel="noopener noreferrer" className="hacked-banner">
-              <span className="hacked-icon">🐙</span>
-              <div className="hacked-content">
-                <span className="hacked-sys">MENSAJE ENCRIPTADO :: ID_JM :: </span>
-                <span className="hacked-title">ENCONTRÉ LOS ARCHIVOS. ESTÁN AQUÍ.</span>
-                <span className="hacked-cta">VER LOS CAPÍTULOS COMPLETOS EN EL YOUTUBE ►</span>
-              </div>
-            </a>
+            <HackedBanner />
 
             <div className="box">
               <h3>EN VIVO — TELEMIRA</h3>
