@@ -119,7 +119,7 @@ export default function Home() {
               <div className="hacked-content">
                 <span className="hacked-sys">MENSAJE ENCRIPTADO :: ID_JM :: </span>
                 <span className="hacked-title">ENCONTRÉ LOS ARCHIVOS. ESTÁN AQUÍ.</span>
-                <span className="hacked-cta">DESCIFRAR Y VER CAPÍTULOS COMPLETOS ►</span>
+                <span className="hacked-cta">VER LOS CAPÍTULOS COMPLETOS EN EL YOUTUBE ►</span>
               </div>
             </a>
 
