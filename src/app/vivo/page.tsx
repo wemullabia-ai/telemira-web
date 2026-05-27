@@ -11,8 +11,6 @@ const PLAYLIST = [
   { title: 'Ping-Pong Petals (Alt)',      file: 'Ping-Pong Petals (1).mp3' },
   { title: 'Pudding Raincoat',            file: 'Pudding Raincoat.mp3' },
   { title: 'Morning Signal',              file: 'Morning Signal.mp3' },
-  { title: 'Telemira ID Especial',        file: 'ElevenLabs_2026-05-24T20_18_51__s100_v3.mp3' },
-  { title: 'El Faraón - Promo Oficial',   file: 'ElevenLabs_2026-05-24T20_31_54_El Faraon - Full, Clear, Mellow_pvc_sp100_s50_sb88_v3.mp3' },
 ]
 
 function EqBars({ active }: { active: boolean }) {
