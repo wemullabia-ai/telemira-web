@@ -114,6 +114,15 @@ export default function Home() {
           {/* ===== CENTER COLUMN ===== */}
           <div className="center-col">
 
+            <a href="https://www.youtube.com/channel/UCYndcBw_lDj4WqHUtvdrr4w" target="_blank" rel="noopener noreferrer" className="hacked-banner">
+              <span className="hacked-icon">🐙</span>
+              <div className="hacked-content">
+                <span className="hacked-sys">MENSAJE ENCRIPTADO :: ID_JM :: </span>
+                <span className="hacked-title">ENCONTRÉ LOS ARCHIVOS. ESTÁN AQUÍ.</span>
+                <span className="hacked-cta">DESCIFRAR Y VER CAPÍTULOS COMPLETOS ►</span>
+              </div>
+            </a>
+
             <div className="box">
               <h3>EN VIVO — TELEMIRA</h3>
               <VideoPlayer />
@@ -162,13 +171,6 @@ export default function Home() {
             </div>
 
             <div className="banners">
-              <a href="https://www.youtube.com/channel/UCYndcBw_lDj4WqHUtvdrr4w" target="_blank" rel="noopener noreferrer" className="banner-youtube">
-                <span className="yt-icon">▶</span>
-                <div className="yt-text">
-                  <span className="yt-title">CANAL OFICIAL DE YOUTUBE</span>
-                  <span className="yt-cta">MIRA NUESTROS EPISODIOS COMPLETOS AQUÍ</span>
-                </div>
-              </a>
               <div className="banner-lv">
                 <span className="env-icon">✉</span>
                 <span>ESCRÍBENOS TU OPINIÓN<br />EN NUESTRO LIBRO DE VISITAS</span>
