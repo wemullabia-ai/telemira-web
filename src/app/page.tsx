@@ -222,10 +222,18 @@ export default function Home() {
 
             <div className="box">
               <h3>Descargas</h3>
+              <a href="/Telemiragrama.pdf" download="Telemiragrama.pdf" style={{ display: 'block' }}>
+                <img
+                  src="/telemiragrama-portada.png"
+                  alt="Telemiragrama — Edición Especial 2026"
+                  style={{ width: '100%', display: 'block', borderBottom: '2px solid #003399' }}
+                />
+              </a>
               <ul className="dl-list">
-                <li><a href="/vivo">Fondos de pantalla de Telemira</a> <span className="badge-new">NUEVO!</span></li>
+                <li><a href="/Telemiragrama.pdf" download="Telemiragrama.pdf">Telemiragrama — Edición Especial</a> <span className="badge-new">NUEVO!</span></li>
+                <li><a href="/vivo">Fondos de pantalla de Telemira</a></li>
                 <li><a href="/vivo">Sonidos del Payaso Terraplanista</a></li>
-                <li><a href="/vivo">Música de Poetas Extremos</a> <span className="badge-new">NUEVO!</span></li>
+                <li><a href="/vivo">Música de Poetas Extremos</a></li>
                 <li><a href="/vivo">Logos y separadores</a></li>
               </ul>
             </div>

@@ -710,6 +710,69 @@ table { border-collapse: collapse; }
   color: #000000;
 }
 
+/* ---- POPUP ESPALDA (alargamiento) ---- */
+.popup-espalda {
+  left: 20px;
+  right: auto;
+  top: 20%;
+  width: 300px;
+  border-color: #cc7700;
+  background: #fff8e7;
+}
+.popup-espalda .bar {
+  background: #cc7700;
+}
+.popup-espalda .actions button {
+  background: #ffcc00;
+  border-color: #cc9900;
+  color: #000066;
+  font-weight: bold;
+}
+.popup-espalda .actions button:hover {
+  background: #ffe680;
+}
+.espalda-body {
+  padding: 10px 12px !important;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.espalda-icon {
+  font-size: 38px;
+  flex-shrink: 0;
+  line-height: 1;
+  filter: drop-shadow(1px 1px 0 #cc7700);
+}
+.espalda-text {
+  flex: 1;
+}
+.espalda-headline {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  color: #cc3300;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 5px;
+}
+.espalda-sub {
+  font-size: 10px;
+  color: #333333;
+  margin: 0 0 6px;
+  line-height: 1.4;
+}
+.espalda-badge {
+  display: inline-block;
+  background: #cc0000;
+  color: #ffff00;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 8px;
+  font-weight: bold;
+  padding: 2px 5px;
+  letter-spacing: 1px;
+  animation: blink 0.7s step-end infinite;
+}
+
 /* ---- TELEMENSAJERO ---- */
 #telemensajero {
   position: fixed;

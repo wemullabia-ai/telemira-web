@@ -1,19 +1,32 @@
 'use client'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 
 export default function AdPayaso() {
   const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    v.muted = true
+    v.play().catch(() => {
+      // autoplay blocked — wait for user interaction then try again
+      const resume = () => { v.play().catch(() => {}); document.removeEventListener('click', resume) }
+      document.addEventListener('click', resume)
+    })
+  }, [])
 
   return (
     <div className="box" style={{ padding: 0, overflow: 'hidden' }}>
       <div
         onMouseEnter={() => { if (videoRef.current) videoRef.current.muted = false }}
-        onMouseLeave={() => { if (videoRef.current) videoRef.current.muted = true }}
+        onMouseLeave={() => { if (videoRef.current) { videoRef.current.muted = true } }}
       >
         <video
           ref={videoRef}
           src="https://res.cloudinary.com/dlismekzd/video/upload/v1779548410/payaso_ad_qz9k79.mp4"
-          autoPlay muted loop playsInline
+          muted
+          loop
+          playsInline
           style={{ width: '100%', display: 'block', cursor: 'pointer' }}
         />
       </div>
